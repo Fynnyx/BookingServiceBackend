@@ -42,17 +42,46 @@
         "images"
       ]
     },
-    "carts": {
-      "type": "relation",
-      "relation": "manyToMany",
-      "target": "api::cart.cart",
-      "mappedBy": "items"
-    },
     "bookings": {
       "type": "relation",
       "relation": "oneToMany",
       "target": "api::booking.booking",
       "mappedBy": "item"
+    },
+    "BedCount": {
+      "type": "integer",
+      "min": 0,
+      "required": true
+    },
+    "hasNetwork": {
+      "type": "boolean",
+      "default": false,
+      "required": true
+    },
+    "hasGarden": {
+      "type": "boolean",
+      "default": false,
+      "required": true
+    },
+    "hasPool": {
+      "type": "boolean",
+      "default": false,
+      "required": true
+    },
+    "hasShower": {
+      "type": "boolean",
+      "default": true,
+      "required": true
+    },
+    "hasBathtub": {
+      "type": "boolean",
+      "default": false,
+      "required": true
+    },
+    "hasKitchen": {
+      "type": "boolean",
+      "default": false,
+      "required": true
     }
   }
 }
