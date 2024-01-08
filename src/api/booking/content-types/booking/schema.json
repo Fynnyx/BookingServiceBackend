@@ -34,6 +34,21 @@
       "relation": "manyToOne",
       "target": "plugin::users-permissions.user",
       "inversedBy": "bookings"
+    },
+    "ServiceFood": {
+      "type": "boolean",
+      "default": false,
+      "required": true
+    },
+    "ServiceCleaning": {
+      "type": "boolean",
+      "default": false,
+      "required": true
+    },
+    "ServiceMinibar": {
+      "type": "boolean",
+      "default": false,
+      "required": true
     }
   }
 }
