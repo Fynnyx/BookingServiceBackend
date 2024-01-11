@@ -1,0 +1,27 @@
+{
+  "collectionName": "components_meta_contacts",
+  "info": {
+    "displayName": "Contact",
+    "icon": "book"
+  },
+  "options": {},
+  "attributes": {
+    "Firstname": {
+      "type": "string",
+      "required": true
+    },
+    "Lastname": {
+      "type": "string",
+      "required": true
+    },
+    "Email": {
+      "type": "email",
+      "required": true
+    },
+    "PhoneNumber": {
+      "type": "string",
+      "regex": "^[\\+]?[(]?[0-9]{3}[)]?[-\\s\\.]?[0-9]{3}[-\\s\\.]?[0-9]{4,6}$",
+      "required": true
+    }
+  }
+}

@@ -496,6 +496,7 @@ export interface ApiItemItem extends Schema.CollectionType {
     Address: Attribute.JSON &
       Attribute.Required &
       Attribute.CustomField<'plugin::google-maps.location-picker'>;
+    Contact: Attribute.Component<'meta.contact'> & Attribute.Required;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     publishedAt: Attribute.DateTime;

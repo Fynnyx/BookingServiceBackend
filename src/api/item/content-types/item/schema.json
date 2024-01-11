@@ -87,6 +87,12 @@
       "type": "customField",
       "customField": "plugin::google-maps.location-picker",
       "required": true
+    },
+    "Contact": {
+      "type": "component",
+      "repeatable": false,
+      "component": "meta.contact",
+      "required": true
     }
   }
 }
