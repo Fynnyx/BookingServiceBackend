@@ -82,6 +82,11 @@
       "type": "boolean",
       "default": false,
       "required": true
+    },
+    "Address": {
+      "type": "customField",
+      "customField": "plugin::google-maps.location-picker",
+      "required": true
     }
   }
 }
