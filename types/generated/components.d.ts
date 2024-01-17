@@ -1,5 +1,17 @@
 import type { Schema, Attribute } from '@strapi/strapi';
 
+export interface DocumentAdvancedDocument extends Schema.Component {
+  collectionName: 'components_document_advanced_documents';
+  info: {
+    displayName: 'AdvancedDocument';
+    icon: 'layer';
+  };
+  attributes: {
+    DocumentName: Attribute.String & Attribute.Required;
+    Document: Attribute.Media & Attribute.Required;
+  };
+}
+
 export interface MetaContact extends Schema.Component {
   collectionName: 'components_meta_contacts';
   info: {
@@ -17,6 +29,7 @@ export interface MetaContact extends Schema.Component {
 declare module '@strapi/types' {
   export module Shared {
     export interface Components {
+      'document.advanced-document': DocumentAdvancedDocument;
       'meta.contact': MetaContact;
     }
   }

@@ -417,15 +417,8 @@ export interface ApiBookingBooking extends Schema.CollectionType {
       'manyToOne',
       'plugin::users-permissions.user'
     >;
-    ServiceFood: Attribute.Boolean &
-      Attribute.Required &
-      Attribute.DefaultTo<false>;
-    ServiceCleaning: Attribute.Boolean &
-      Attribute.Required &
-      Attribute.DefaultTo<false>;
-    ServiceMinibar: Attribute.Boolean &
-      Attribute.Required &
-      Attribute.DefaultTo<false>;
+    Costs: Attribute.Decimal & Attribute.Required;
+    TransactionId: Attribute.String & Attribute.Required;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     createdBy: Attribute.Relation<
@@ -497,6 +490,7 @@ export interface ApiItemItem extends Schema.CollectionType {
       Attribute.Required &
       Attribute.CustomField<'plugin::google-maps.location-picker'>;
     Contact: Attribute.Component<'meta.contact'> & Attribute.Required;
+    documents: Attribute.Component<'document.advanced-document', true>;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     publishedAt: Attribute.DateTime;
@@ -816,7 +810,6 @@ export interface PluginUsersPermissionsUser extends Schema.CollectionType {
   };
   options: {
     draftAndPublish: false;
-    timestamps: true;
   };
   attributes: {
     username: Attribute.String &
@@ -850,6 +843,9 @@ export interface PluginUsersPermissionsUser extends Schema.CollectionType {
       'oneToMany',
       'api::booking.booking'
     >;
+    Firstname: Attribute.String & Attribute.Required;
+    Lastname: Attribute.String;
+    Birthday: Attribute.Date & Attribute.Required;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     createdBy: Attribute.Relation<

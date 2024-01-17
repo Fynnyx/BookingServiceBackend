@@ -35,19 +35,12 @@
       "target": "plugin::users-permissions.user",
       "inversedBy": "bookings"
     },
-    "ServiceFood": {
-      "type": "boolean",
-      "default": false,
+    "Costs": {
+      "type": "decimal",
       "required": true
     },
-    "ServiceCleaning": {
-      "type": "boolean",
-      "default": false,
-      "required": true
-    },
-    "ServiceMinibar": {
-      "type": "boolean",
-      "default": false,
+    "TransactionId": {
+      "type": "string",
       "required": true
     }
   }

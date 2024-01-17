@@ -9,8 +9,7 @@
     "displayName": "User"
   },
   "options": {
-    "draftAndPublish": false,
-    "timestamps": true
+    "draftAndPublish": false
   },
   "attributes": {
     "username": {
@@ -71,6 +70,17 @@
       "relation": "oneToMany",
       "target": "api::booking.booking",
       "mappedBy": "user"
+    },
+    "Firstname": {
+      "type": "string",
+      "required": true
+    },
+    "Lastname": {
+      "type": "string"
+    },
+    "Birthday": {
+      "type": "date",
+      "required": true
     }
   }
 }

@@ -93,6 +93,11 @@
       "repeatable": false,
       "component": "meta.contact",
       "required": true
+    },
+    "documents": {
+      "type": "component",
+      "repeatable": true,
+      "component": "document.advanced-document"
     }
   }
 }
